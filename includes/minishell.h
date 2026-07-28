@@ -6,7 +6,7 @@
 /*   By: abasilio <abasilio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/26 19:13:37 by abasilio          #+#    #+#             */
-/*   Updated: 2026/07/28 12:37:02 by abasilio         ###   ########.fr       */
+/*   Updated: 2026/07/28 16:57:36 by abasilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,12 +92,14 @@ t_list	*ft_get_cmd_list(char *line, t_shell *sh);
 t_list	*parser(t_list *tokens);
 t_list	*lexer(char *line);
 t_token	*new_token(enum e_token_type type, char *value, enum e_quote quote);
-t_cmd	*new_cmd();
+t_cmd	*new_cmd(void);
 bool	is_redirection(t_token *token);
 void	add_redirection(t_cmd *cmd, enum e_token_type type, char *file);
 void	expander(t_list *cmds,  t_shell *shell);
 t_shell	*init_shell(char **envp);
 void	syntax_error(void);
+
+char	*ft_strndup(const char *s, size_t n);
 
 //--DEBUG-HELPER-FUNC
 int	ft_execute(t_list *cmds, t_shell *shell);

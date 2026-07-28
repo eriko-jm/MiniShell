@@ -11,7 +11,7 @@ LIBFT 		= $(LIBFT_DIR)/libft.a
 INC_DIR		= includes
 SRC_DIR		= src
 
-SRC	 = cmd_utils.c expander.c ft_shell.c lexer.c main.c parser.c debug_helper_functions.c ft_execute.c get_cmd_list.c lexer_utils.c new_token.c syntax.c
+SRC	 = cmd_utils.c expander.c ft_shell.c lexer.c main.c parser.c debug_helper_functions.c ft_execute.c get_cmd_list.c lexer_utils.c new_token.c syntax.c ft_strndup.c
 
 OBJS = $(addprefix $(SRC_DIR)/, $(SRC:.c=.o))
 

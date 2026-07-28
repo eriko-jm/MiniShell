@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   syntax.c                                           :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasilio <abasilio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/28 11:27:13 by abasilio          #+#    #+#             */
-/*   Updated: 2026/07/28 16:51:43 by abasilio         ###   ########.fr       */
+/*   Created: 2026/07/28 16:47:03 by abasilio          #+#    #+#             */
+/*   Updated: 2026/07/28 17:03:34 by abasilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minishell.h"
 
-//check syntax
-
-//TODO - do something when a syntaxis error happen
-//syntax error
-void	syntax_error(void)
+char	*ft_strndup(const char *s, size_t n) //REVIEW - Should it be directly on libft.a?
 {
-	exit(3);//FIXME - call error function or error handler, something but exit
+	size_t	i;
+	char	*dup;
+
+	i = 0;
+	dup = malloc(sizeof(char) * (n + 1));
+	if (!dup)
+		return (NULL);
+	dup[n] = '\0';
+	while (s[i] != '\0' && i < n)
+	{
+		dup[i] = s[i];
+		i++;
+	}
+	return (dup);
 }

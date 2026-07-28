@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   cmd_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasilio <abasilio@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: abasilio <abasilio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 08:25:19 by abasilio          #+#    #+#             */
-/*   Updated: 2026/07/28 00:54:02 by abasilio         ###   ########.fr       */
+/*   Updated: 2026/07/28 16:56:37 by abasilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minishell.h"
 
-t_cmd	*new_cmd()
+t_cmd	*new_cmd(void)
 {
 	t_cmd	*cmd;
 

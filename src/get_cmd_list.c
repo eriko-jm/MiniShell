@@ -6,7 +6,7 @@
 /*   By: abasilio <abasilio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 15:19:57 by abasilio          #+#    #+#             */
-/*   Updated: 2026/07/28 15:22:11 by abasilio         ###   ########.fr       */
+/*   Updated: 2026/07/28 16:52:02 by abasilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ t_list	*ft_get_cmd_list(char *line, t_shell *sh)
 	t_list	*cmds;
 
 	tokens = lexer(line);
-	print_tokens_list(tokens);//FIX - Only for debug, delete!
+	print_tokens_list(tokens);//FIXME - Only for debug, delete!
 
 	if (!tokens)
 		return (NULL);
 
 	cmds = parser(tokens);
 
-	print_cmd_list(cmds);//FIX - Only for debug, delete!
+	print_cmd_list(cmds);//FIXME - Only for debug, delete!
 	//free_token_list(tokens);
 	ft_lstclear(&tokens, free_token);
 	expander(cmds, sh);
