@@ -6,7 +6,7 @@
 /*   By: abasilio <abasilio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/26 19:13:37 by abasilio          #+#    #+#             */
-/*   Updated: 2026/07/28 16:57:36 by abasilio         ###   ########.fr       */
+/*   Updated: 2026/07/28 18:18:45 by abasilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,11 +102,12 @@ void	syntax_error(void);
 char	*ft_strndup(const char *s, size_t n);
 
 //--DEBUG-HELPER-FUNC
-int	ft_execute(t_list *cmds, t_shell *shell);
+int		ft_execute(t_list *cmds, t_shell *shell);
 
 void	print_token_node(void *node);
 void	print_cmd_list(t_list *cmds);
 void	println(char *s);
 void	print_tokens_list(t_list *tokens);
 void	print_cmd_list(t_list *cmds);
+void	print_env_list(t_list *env_lst);
 #endif

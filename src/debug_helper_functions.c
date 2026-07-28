@@ -6,7 +6,7 @@
 /*   By: abasilio <abasilio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 13:52:31 by abasilio          #+#    #+#             */
-/*   Updated: 2026/07/28 15:20:28 by abasilio         ###   ########.fr       */
+/*   Updated: 2026/07/28 18:22:25 by abasilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,20 @@ void	print_cmd_list(t_list *cmds)
 {
 	println("=========CMD Lst==============");
 	ft_lstiter(cmds, print_cmd_node);
+}
+
+
+
+void	print_env_node(void *node)
+{
+	println("----------env---");
+	ft_printf("Key: %s\n", ((t_env *)node)->key);
+	ft_printf("Value: %s\n", ((t_env *)node)->value);
+}
+
+void	print_env_list(t_list *env_lst)
+{
+	println("=========ENV Lst==============");
+	ft_lstiter(env_lst, print_env_node);
+	println("========= ---END--- ENV Lst==============");
 }

@@ -6,7 +6,7 @@
 /*   By: abasilio <abasilio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 13:51:04 by abasilio          #+#    #+#             */
-/*   Updated: 2026/07/28 14:45:57 by abasilio         ###   ########.fr       */
+/*   Updated: 2026/07/28 18:12:26 by abasilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@
 int main(int argc, char **argv, char **envp)
 {
 	(void)argv;
-
+	
 	char	*line;
 	t_list	*cmds;
 	t_shell	*shell;
@@ -105,6 +105,7 @@ int main(int argc, char **argv, char **envp)
 		return (1);
 
 	shell = init_shell(envp);
+	print_env_list(shell->env);//FIXME - Only for debug, delete!
 	line = readline("minishell$ ");
 	while (line)
 	{
@@ -113,7 +114,7 @@ int main(int argc, char **argv, char **envp)
 		cmds = ft_get_cmd_list(line, shell);
 		if (cmds)
 		{
-			shell->last_status = ft_execute(cmds, shell); // - how to save the last status for expander use
+			shell->last_status = ft_execute(cmds, shell); //REVIEW - how to save the last status for expander use
 			//free_cmd_list(cmds);
 			ft_lstclear(&cmds, free_cmd);
 		}
