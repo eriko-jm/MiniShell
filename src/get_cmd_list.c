@@ -6,7 +6,7 @@
 /*   By: abasilio <abasilio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 15:19:57 by abasilio          #+#    #+#             */
-/*   Updated: 2026/07/28 12:37:11 by abasilio         ###   ########.fr       */
+/*   Updated: 2026/07/28 15:22:11 by abasilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ t_list	*ft_get_cmd_list(char *line, t_shell *sh)
 	ft_lstclear(&tokens, free_token);
 	expander(cmds, sh);
 
-	println("!!");//FIX - Delete!!
 	return (cmds);
 }
 

@@ -6,7 +6,7 @@
 /*   By: abasilio <abasilio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 13:52:31 by abasilio          #+#    #+#             */
-/*   Updated: 2026/07/28 14:06:57 by abasilio         ###   ########.fr       */
+/*   Updated: 2026/07/28 15:20:28 by abasilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	print_token_node(void *node)
 }
 void	print_tokens_list(t_list *tokens)
 {
+	println("=========TOKENS Lst===========");
 	ft_lstiter(tokens, print_token_node);
 }
 
@@ -66,5 +67,6 @@ void	print_cmd_node(void *node)
 
 void	print_cmd_list(t_list *cmds)
 {
+	println("=========CMD Lst==============");
 	ft_lstiter(cmds, print_cmd_node);
 }
