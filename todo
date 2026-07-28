@@ -1,0 +1,8 @@
+
+* test redirections - check porque en algunos casos parece incertar de mas
+* parser
+	* syntax validation on parser
+		ej. invalid syntax: |, ls |, < file, cat >. |||
+* quote rules (cases such: abc"$USER"def or "$USER"'abc', with different kind mixed)
+* expander
+* manejar CTRL+D, CTRL+\ y CTRL+C
