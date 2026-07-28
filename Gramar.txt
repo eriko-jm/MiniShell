@@ -1,0 +1,40 @@
+G = (N, Σ, P, S)
+N = { input, pipeline, command, element, redirection }
+Σ = { WORD, PIPE, REDIR_IN, REDIR_OUT, APPEND, HEREDOC, EOF }
+S = input
+P = {
+	input
+			→ pipeline EOF
+	pipeline
+			→ command
+			| command PIPE pipeline
+	
+	command
+			→ element+
+			| element command
+
+	element
+			→ WORD
+			| redirection
+
+	redirection
+			→ REDIR_IN WORD
+			| REDIR_OUT WORD
+			| APPEND WORD
+			| HEREDOC WORD
+}
+
+EBNF grammar: EBNF is a formal meta-language used to express context-free grammars and define the syntax of computer programming languages
+input		::= pipeline EOF ;
+
+pipeline	::= command { PIPE command } ;
+
+command		::= element { element } ;
+
+element		::= WORD
+				| redirection ;
+
+redirection	::= REDIR_IN WORD
+				| REDIR_OUT WORD
+				| APPEND WORD
+				| HEREDOC WORD ;
