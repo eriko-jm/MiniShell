@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasilio <abasilio@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abasilio <abasilio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/26 19:13:37 by abasilio          #+#    #+#             */
-/*   Updated: 2026/07/28 18:18:45 by abasilio         ###   ########.fr       */
+/*   Updated: 2026/07/29 09:04:04 by abasilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 # include <readline/readline.h>
 # include <readline/history.h>
 # include <stdbool.h>
+# ifndef DEBUG_VERBOSE
+#  define DEBUG_VERBOSE 0
+# endif
 
 enum e_token_type
 {
@@ -110,4 +113,5 @@ void	println(char *s);
 void	print_tokens_list(t_list *tokens);
 void	print_cmd_list(t_list *cmds);
 void	print_env_list(t_list *env_lst);
+void	print_expanded_cmd_list(t_list *cmds);
 #endif

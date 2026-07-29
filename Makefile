@@ -1,5 +1,7 @@
 NAME 	= minishell
 CC 		= cc
+DEBUG_VERBOSE ?= 0
+DEBUG_FLAGS = -g3 -DDEBUG_VERBOSE=$(DEBUG_VERBOSE)
 CFLAGS 	= -Wall -Wextra -Werror
 
 AR 		= ar
@@ -40,7 +42,9 @@ fclean: clean
 re: fclean all
 
 .PHONY: test
-test: CFLAGS := $(CFLAGS) -g3
+test: DEBUG_VERBOSE = 1
+test: CFLAGS := $(CFLAGS) $(DEBUG_FLAGS)
+#test: DEBUG_FLAGS = -g3 -DDEBUG_VERBOSE=1
 test: re
 
 .PHONY: all clean fclean re test

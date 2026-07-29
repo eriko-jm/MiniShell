@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   debug_helper_functions.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasilio <abasilio@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abasilio <abasilio@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 13:52:31 by abasilio          #+#    #+#             */
-/*   Updated: 2026/07/28 18:22:25 by abasilio         ###   ########.fr       */
+/*   Updated: 2026/07/29 08:51:57 by abasilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void	print_token_node(void *node)
 }
 void	print_tokens_list(t_list *tokens)
 {
+	if (!DEBUG_VERBOSE)
+		return ;
 	println("=========TOKENS Lst===========");
 	ft_lstiter(tokens, print_token_node);
 }
@@ -67,6 +69,8 @@ void	print_cmd_node(void *node)
 
 void	print_cmd_list(t_list *cmds)
 {
+	if (!DEBUG_VERBOSE)
+		return ;
 	println("=========CMD Lst==============");
 	ft_lstiter(cmds, print_cmd_node);
 }
@@ -82,7 +86,19 @@ void	print_env_node(void *node)
 
 void	print_env_list(t_list *env_lst)
 {
+	if (!DEBUG_VERBOSE)
+		return ;
 	println("=========ENV Lst==============");
 	ft_lstiter(env_lst, print_env_node);
 	println("========= ---END--- ENV Lst==============");
+}
+
+
+void	print_expanded_cmd_list(t_list *cmds)
+{
+	if (!DEBUG_VERBOSE)
+			return ;
+	println("=========EXPANDED=============");
+	print_cmd_list(cmds);
+	println("===========END================");
 }
