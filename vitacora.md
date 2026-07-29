@@ -88,6 +88,64 @@ Pratt Parsing:
 
 ---
 
+# Expansion
+
+The order in Bash is roughly:
+ 1. Parameter expansion ($VAR, $?, etc.)
+ 2. Command substitution
+ 3. Arithmetic expansion
+ 4. Field splitting    *=====>>>* argv len variation happen here (if more or less fields are needed)
+ 5. Pathname expansion (*, ?, [])
+ 6. Quote removal
+
+
+ - argv does NOT change size with:
+   * Literal expansion
+   ```
+   VAR=world
+   echo hello$VAR 
+   ```
+   becomes:
+   ```
+   argv = {"echo", "helloworld"}
+   ```
+   * Quoted expansion
+   ```
+   VAR="a b c"
+   echo "$VAR"
+   ```
+   becomes:
+   ```
+   argv = {"echo", "a b c"}
+   ```
+   * Empty var inside quotes
+   ```
+   unset VAR
+   echo "$VAR"
+   ```
+   becomes:
+   ```
+   argv = {"echo", ""}
+   ```
+   * Concatenation
+   ```
+   VAR=abc
+   echo x$VARy
+   ```
+   becomes:
+   ```
+   argv = {"echo", "xabcy"}
+   ```
+ - argv DOES change size with:
+	- Unquoted variable containing spaces
+	- Empty expansion disappears. One argument disappeared.
+	- Variable with leading/trailing spaces. Leading/trailing IFS whitespace is ignored.
+	- Multiple variables
+
+* Redirections
+
+---
+
 Flujo de entrada:
 readline() -> Lexer (Tokenizer) -> (lista de tokens) -> parser -> AST (o lista de comandos) -> Expander ->  (lista de comandos expandida) -> send final structure to executor
 entrada -> list(tokens) -> expand(cmd) -> list(cmd) 

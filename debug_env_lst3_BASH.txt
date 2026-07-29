@@ -1,0 +1,191 @@
+=========ENV Lst==============
+----------env---
+Key: SHELL
+Value: /bin/zsh
+----------env---
+Key: SESSION_MANAGER
+Value: local/c1r16s2.42madrid.com:@/tmp/.ICE-unix/2302020,unix/c1r16s2.42madrid.com:/tmp/.ICE-unix/2302020
+----------env---
+Key: QT_ACCESSIBILITY
+Value: 1
+----------env---
+Key: COLORTERM
+Value: truecolor
+----------env---
+Key: XDG_CONFIG_DIRS
+Value: /etc/xdg/xdg-ubuntu:/etc/xdg
+----------env---
+Key: SSH_AGENT_LAUNCHER
+Value: gnome-keyring
+----------env---
+Key: XDG_SESSION_PATH
+Value: /org/freedesktop/DisplayManager/Session29
+----------env---
+Key: XDG_MENU_PREFIX
+Value: gnome-
+----------env---
+Key: TERM_PROGRAM_VERSION
+Value: 1.123.0
+----------env---
+Key: GNOME_DESKTOP_SESSION_ID
+Value: this-is-deprecated
+----------env---
+Key: GTK_IM_MODULE
+Value: ibus
+----------env---
+Key: SSH_AUTH_SOCK
+Value: /run/user/103000/keyring/ssh
+----------env---
+Key: XMODIFIERS
+Value: @im=ibus
+----------env---
+Key: DESKTOP_SESSION
+Value: ubuntu
+----------env---
+Key: FT_HOOK_NAME
+Value: login-user
+----------env---
+Key: GTK_MODULES
+Value: gail:atk-bridge
+----------env---
+Key: FT_HOOK_PATHNAME
+Value: login-user.d
+----------env---
+Key: PWD
+Value: /home/abasilio/Documents/minishell
+----------env---
+Key: KRB5CCNAME
+Value: FILE:/tmp/krb5cc_103000_0EoEyc
+----------env---
+Key: XDG_SESSION_DESKTOP
+Value: ubuntu
+----------env---
+Key: LOGNAME
+Value: abasilio
+----------env---
+Key: XDG_SESSION_TYPE
+Value: x11
+----------env---
+Key: GPG_AGENT_INFO
+Value: /run/user/103000/gnupg/S.gpg-agent:0:1
+----------env---
+Key: SYSTEMD_EXEC_PID
+Value: 2302043
+----------env---
+Key: XAUTHORITY
+Value: /home/abasilio/.Xauthority
+----------env---
+Key: VSCODE_GIT_ASKPASS_NODE
+Value: /usr/share/code/code
+----------env---
+Key: XDG_GREETER_DATA_DIR
+Value: /var/lib/lightdm-data/abasilio
+----------env---
+Key: HOME
+Value: /home/abasilio
+----------env---
+Key: IM_CONFIG_PHASE
+Value: 1
+----------env---
+Key: LANG
+Value: en_US.UTF-8
+----------env---
+Key: LS_COLORS
+Value: rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+----------env---
+Key: XDG_CURRENT_DESKTOP
+Value: ubuntu:GNOME
+----------env---
+Key: VTE_VERSION
+Value: 6800
+----------env---
+Key: GIT_ASKPASS
+Value: /usr/share/code/resources/app/extensions/git/dist/askpass.sh
+----------env---
+Key: XDG_SEAT_PATH
+Value: /org/freedesktop/DisplayManager/Seat0
+----------env---
+Key: GNOME_TERMINAL_SCREEN
+Value: /org/gnome/Terminal/screen/a1fe5f49_85e2_41ae_ae07_774438f2c834
+----------env---
+Key: CHROME_DESKTOP
+Value: code.desktop
+----------env---
+Key: VSCODE_GIT_ASKPASS_EXTRA_ARGS
+Value: 
+----------env---
+Key: XDG_SESSION_CLASS
+Value: user
+----------env---
+Key: TERM
+Value: xterm-256color
+----------env---
+Key: VSCODE_NONCE
+Value: e2d47650-b7c0-40e4-af80-bb0b953ef951
+----------env---
+Key: LIBVIRT_DEFAULT_URI
+Value: qemu:///system
+----------env---
+Key: USER
+Value: abasilio
+----------env---
+Key: VSCODE_GIT_IPC_HANDLE
+Value: /run/user/103000/vscode-git-0b214e6335.sock
+----------env---
+Key: GNOME_TERMINAL_SERVICE
+Value: :1.92
+----------env---
+Key: TEST_VAR_2
+Value: a
+----------env---
+Key: TEST_VAR_1
+Value: valor de ejemplo./minishell./minishell
+----------env---
+Key: DISPLAY
+Value: :0
+----------env---
+Key: SHLVL
+Value: 3
+----------env---
+Key: QT_IM_MODULE
+Value: ibus
+----------env---
+Key: FC_FONTATIONS
+Value: 1
+----------env---
+Key: XDG_RUNTIME_DIR
+Value: /run/user/103000
+----------env---
+Key: DOCKER_HOST
+Value: unix:///run/user/103000/docker.sock
+----------env---
+Key: VSCODE_GIT_ASKPASS_MAIN
+Value: /usr/share/code/resources/app/extensions/git/dist/askpass-main.js
+----------env---
+Key: XDG_DATA_DIRS
+Value: /usr/share/ubuntu:/usr/share/gnome:/home/abasilio/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+----------env---
+Key: GDK_BACKEND
+Value: x11
+----------env---
+Key: PATH
+Value: /home/abasilio/bin:/home/abasilio/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+----------env---
+Key: MACADDRESS
+Value: 38:f9:d3:12:6e:1e
+----------env---
+Key: GDMSESSION
+Value: ubuntu
+----------env---
+Key: DBUS_SESSION_BUS_ADDRESS
+Value: unix:path=/run/user/103000/bus
+----------env---
+Key: OLDPWD
+Value: /home/abasilio/Documents/minishell
+----------env---
+Key: TERM_PROGRAM
+Value: vscode
+----------env---
+Key: _
+Value: ./minishell
+========= ---END--- ENV Lst==============

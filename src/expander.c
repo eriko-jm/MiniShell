@@ -6,7 +6,7 @@
 /*   By: abasilio <abasilio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 02:44:24 by abasilio          #+#    #+#             */
-/*   Updated: 2026/07/28 10:56:06 by abasilio         ###   ########.fr       */
+/*   Updated: 2026/07/29 15:24:47 by abasilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,40 +14,6 @@
 
 char	*expand_word(char *word, t_shell *shell)
 {
-	(void)word;
-	(void)shell;
-
-	return (NULL);
-}
-
-void 	expand_argv(char *word, t_shell *shell)
-{
-	expand_word(word, shell);
-}
-
-void	expand_redirs(char *word, t_shell *shell)
-{
-	expand_word(word, shell);
-}
-
-void	expander(t_list *cmds, t_shell *shell)
-{
-	//shell->env
-	//Expand every argv[i]
-	//Expand every redirection filename
-	//for each command
-	//{
-	//	expand argv;
-	//	expand redirections;
-	//}
-
-	while (cmds)
-	{
-		expand_argv(cmds->content, shell);
-		expand_redirs(cmds->content, shell);
-		cmds = cmds->next;
-	}
-
 	//ojo con el caso
 	//VAR="a b c"
 	//echo $VAR
@@ -62,4 +28,41 @@ void	expander(t_list *cmds, t_shell *shell)
 	//Handle $? -> the exit status that shell has already stored from the previously executed command
 	//	- I'll need something like shell->last_status = 1;
 	//Respect quote rules
+
+	if (!word || !*word)
+		return (0);
+	word;
+	(void)shell;
+
+	return (NULL);
+}
+
+void 	expand_argv(char **word, t_shell *shell)
+{
+	if (!word)
+		return ;
+
+	//recorrer array
+	//por cada argumento
+	//recorrer palabra buscando $  //obviamente solo cuando aplique, si esta dentro de comillas puede no aplicar la expansion
+	//		si encuentra $ y debe expandir, verificar que no implique cambiar la cantidad de argumentos
+	//				si hay que cambiar la catidad de argumentos, se necesita un nuevo array del nuevo len y copiar hasta donde el argumento revisado agregar los nuevos argumentos y copiar el resto
+	expand_word(*word, shell);
+}
+
+void	expand_redirs(t_list *redir_lst, t_shell *shell)
+{
+	if (!redir_lst)
+		return ;
+	expand_word(((t_redir *)(redir_lst->content))->file, shell);
+}
+
+void	expander(t_list *cmds, t_shell *shell)
+{
+	while (cmds)
+	{
+		expand_argv(((t_cmd *)(cmds->content))->argv, shell);
+		expand_redirs(((t_cmd *)(cmds->content))->redirs, shell);
+		cmds = cmds->next;
+	}
 }
