@@ -6,7 +6,7 @@
 /*   By: abasilio <abasilio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 02:44:24 by abasilio          #+#    #+#             */
-/*   Updated: 2026/07/29 15:24:47 by abasilio         ###   ########.fr       */
+/*   Updated: 2026/07/29 17:48:45 by abasilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ char	*expand_word(char *word, t_shell *shell)
 
 	if (!word || !*word)
 		return (0);
-	word;
 	(void)shell;
 
 	return (NULL);
