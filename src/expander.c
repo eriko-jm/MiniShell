@@ -6,7 +6,7 @@
 /*   By: abasilio <abasilio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 02:44:24 by abasilio          #+#    #+#             */
-/*   Updated: 2026/07/29 17:48:45 by abasilio         ###   ########.fr       */
+/*   Updated: 2026/07/31 11:11:58 by abasilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*expand_word(char *word, t_shell *shell)
 	//echo $VAR
 	//se expande a:
 	//echo a b c
-	//entonces argv[1] = "$VAR"
+	//entonces argv[1] = "$VAR" // REVIEW - OJO, no es tan asi. ver vitacora, apartado Expansion
 	//deberia sustituir argv[1] por tres:
 	//argv[1] = "a"
 	//argv[2] = "b"
