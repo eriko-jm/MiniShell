@@ -28,6 +28,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	free_arr(char **arr);
 /*******************************************************************/
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -40,6 +41,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *nptr);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		count_arr(char **arr);
+int		ft_strcmp(const char *s1, const char *s2);
 /*******************************************************************/
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);

@@ -29,14 +29,14 @@ t_list	*ft_get_cmd_list(char *line, t_shell *sh)
 	t_list	*cmds;
 
 	tokens = lexer(line);
-	print_tokens_list(tokens);//FIX - Only for debug, delete!
+	//print_tokens_list(tokens);//FIX - Only for debug, delete!
 
 	if (!tokens)
 		return (NULL);
 
 	cmds = parser(tokens);
 
-	print_cmd_list(cmds);//FIX - Only for debug, delete!
+	//print_cmd_list(cmds);//FIX - Only for debug, delete!
 	//free_token_list(tokens);
 	ft_lstclear(&tokens, free_token);
 	expander(cmds, sh);

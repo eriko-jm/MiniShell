@@ -28,7 +28,7 @@ void	add_redirection(t_cmd *cmd, enum e_token_type type, char *file)
 {
 	t_redir	*redir;
 	//Allocate a t_redir.
-	redir = malloc(sizeof(redir));
+	redir = malloc(sizeof(t_redir));
 	if (!redir)
 		exit(1);//FIXME - malloc error: call error handler and clean befor exit
 	//Copy the type.
