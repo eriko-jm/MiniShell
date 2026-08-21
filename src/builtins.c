@@ -113,6 +113,77 @@ int	builtin_export(char **argv, t_shell *shell)
 	return (0);
 }
 
+char	**redo_envp(t_shell *shell, char *argv)
+{
+	int	i;
+	int	j;
+	char **new;
+
+	new = malloc(sizeof(char *) * count_arr(shell->envp));
+	if(!new)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (shell->envp[i])
+	{
+		if (ft_strncmp(shell->envp[i], argv, ft_strlen(argv)) != 0)
+		{
+			new[j] = ft_strdup(shell->envp[i]);
+			j++;
+		}
+		i++;
+	}
+	free_arr(shell->envp);
+	return (new);
+}
+
+int	builtin_unset(char **argv, t_shell *shell)
+{
+	int	i;
+	t_env	*env;
+	t_list	*node;
+	t_list	*temp;
+
+	if (!argv[1] || !argv[1][0])
+	return (0);
+	else
+	{
+		i = 1;
+		while (argv[i])
+		{
+			node = shell->env;
+			if(ft_strcmp(((t_env *)node->content)->key, argv[i]) == 0)
+			{
+				shell->envp = redo_envp(shell, argv[i]);
+				shell->env = node->next;
+				free(node);
+				node = shell->env;
+				i++;
+				continue ;
+			}
+			temp = node;
+			while (node)
+			{
+				env = (t_env *)node->content;
+				if (ft_strcmp(env->key, argv[i]) != 0)
+				{
+					temp = node;
+					node = node->next;
+				}
+				else if (ft_strcmp(env->key, argv[i]) == 0)
+				{
+					temp->next = node->next;
+					shell->envp = redo_envp(shell, argv[i]);
+					free(node);
+					break ;
+				}
+			}
+			i++;
+		}
+	}
+	return (0);
+}
+
 int	is_builtin(char *cmd)
 {
 	if (!cmd)
@@ -140,5 +211,7 @@ int		execute_builtin(t_cmd *cmd, t_shell *shell)
 		return (builtin_exit(cmd->argv, shell));
 	if (!ft_strcmp(cmd->argv[0], "export"))
 		return (builtin_export(cmd->argv, shell));
+	if (!ft_strcmp(cmd->argv[0], "unset"))
+		return (builtin_unset(cmd->argv, shell));
 	return (0);
 }
