@@ -16,8 +16,12 @@ char	*get_key(char *envp)
 {
 	int		len;
 	char	*key;
+	char	*equal;
 
-	len = ft_strchr(envp, '=') - envp;
+	equal = ft_strchr(envp, '=');
+	if (!equal)
+		return (ft_strdup(envp));
+	len = equal - envp;
 	key = ft_substr(envp, 0, len);
 	return (key);
 }
@@ -25,7 +29,11 @@ char	*get_key(char *envp)
 char	*get_value(char *envp)
 {
 	char	*value;
+	char	*equal;
 
+	equal = ft_strchr(envp, '=');
+	if (!equal)
+		return (ft_strdup(""));
 	value = ft_strdup(ft_strchr(envp, '=') + 1);
 	if (!value)
 		return NULL;

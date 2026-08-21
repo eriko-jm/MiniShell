@@ -64,6 +64,7 @@ char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strcut(char *str, int c);
+char	**add_last_arr(char **arr, char *str);
 
 //bonus ->
 

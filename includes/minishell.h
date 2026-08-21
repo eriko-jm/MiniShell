@@ -109,6 +109,8 @@ void	syntax_error(void);
 int		ft_execute(t_list *cmds, t_shell *shell);
 char	*get_path(t_cmd *cmd, t_shell *shell);
 char	*find_path(t_shell *shell);
+char	*get_key(char *envp);
+char	*get_value(char *envp);
 int		builtin_cd(char **argv);
 int		builtin_env(t_shell *shell);
 int		builtin_echo(char **argv);
